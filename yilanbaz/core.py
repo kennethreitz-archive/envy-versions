@@ -22,13 +22,6 @@ def hello():
     return "Hello World..."
 
 
-@app.route('/dists/<dist>')
-def get_dist(dist):
-    g = fetch_dist(dist)
-
-    return Response(g)
-
-
 
 if __name__ == "__main__":
     app.run()
