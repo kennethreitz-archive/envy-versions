@@ -21,11 +21,11 @@ def fetch_dist(dist):
 def hello():
     return "Hello World..."
 
-@app.route('dists/<style>/<version>')
+@app.route('/dists/<style>/<version>')
 def release_info(style, version):
     return jsonify(dist=versions[style][version])
 
-@app.route('dists/<style>/<version>/download')
+@app.route('/dists/<style>/<version>/download')
 def redirect_to_version(style, version):
     v = versions[style][version]
     return redirect(DIST_BASE + '/dists/' + v['dist'])
