@@ -1,1 +1,1 @@
-web: gunicorn yilanbaz:app -b 0.0.0.0:$PORT -w 5 -k gevent -t 3
+web: gunicorn yilanbaz:app -b 0.0.0.0:$PORT -w 1 -k gevent -t 3
