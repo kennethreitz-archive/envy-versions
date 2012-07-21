@@ -28,7 +28,7 @@ def release_info(style, version):
 @app.route('/dists/<style>/<version>/download')
 def redirect_to_version(style, version):
     v = versions[style][version]
-    return redirect(DIST_BASE + '/dists/' + v['dist'])
+    return redirect(DIST_BASE + 'dists/' + v['dist'])
 
 if __name__ == "__main__":
     app.run()
